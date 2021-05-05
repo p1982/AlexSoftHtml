@@ -17,22 +17,7 @@ nextBtn.addEventListener("click", goNextSlide);
 previousBtn.addEventListener("click", goPreviousSlide);
 imgBtn.forEach(elem => elem.addEventListener("click", toggleSlide));
 
-const interval = setInterval(goNextSlide, 5000)
-dot.addEventListener("mouseenter", function (){
-    clearInterval(interval)
-})
-
-dot.addEventListener("mouseleave", function(){
-    setInterval(goNextSlide, 5000)
-})
-
-img.addEventListener("mouseenter", function(){
-    clearInterval(interval)
-});
-
-img.addEventListener("mouseleave", function(){
-    setInterval(goNextSlide, 5000)
-});
+setInterval(goNextSlide, 5000)
 
 function goNextSlide() {
     if (currentSlide >= slides.length-1){
